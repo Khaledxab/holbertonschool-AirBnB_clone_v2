@@ -6,14 +6,12 @@ from os import path
 
 
 def do_pack():
-    """[generates a .tgz archive]
-    """
     timeF = '%Y%m%d%H%M%S'
     time = datetime.utcnow().strftime(timeF)
     file = "versions/web_static_{}.tgz".format(time)
     """fab commands"""
     local("mkdir -p versions")
-    local("tar -cvzf {} web_static".format(filepath))
+    local("tar -cvzf {} web_static".format(file))
     """############"""
     if path.exists(file):
         return file
