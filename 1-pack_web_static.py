@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """generate .tgz archive"""
-from fabric.api import local
 from datetime import datetime
+from fabric.api import local
 from os import path
 
 
