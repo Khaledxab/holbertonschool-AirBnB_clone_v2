@@ -6,6 +6,7 @@ from os import path
 
 
 def do_pack():
+    """.tgz archive do"""
     timeF = '%Y%m%d%H%M%S'
     time = datetime.utcnow().strftime(timeF)
     file = "versions/web_static_{}.tgz".format(time)
