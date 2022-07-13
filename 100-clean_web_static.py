@@ -7,11 +7,7 @@ env.hosts = ['3.91.55.160', '54.147.16.57']
 
 
 def do_clean(number=0):
-    """number = number of arch to keepf number is 0 or 1, 
-    keep only the most recent version of your archive.
-    if number is 2, keep the most recent, 
-    and second most recent versions of your archive.
-    etc."""
+    """keep most recent version of your archive"""
     number = 1 if int(number) == 0 else int(number)
     arch = sorted(os.listdir("versions"))
     [arch.pop() for i in range(number)]
